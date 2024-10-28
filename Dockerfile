@@ -9,5 +9,7 @@ ENV PROJECT_HOME /opt/app
 COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
 WORKDIR $PROJECT_HOME
+
+# Expose the port through which you want to access the application
 EXPOSE 8080
 CMD ["java" ,"-jar","./spring-boot-mongo.jar"]
