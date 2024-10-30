@@ -2,113 +2,120 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css"
+        th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+    
+    <!-- include java script in the footer -->
+    <script type="text/javascript"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    
+    <title>UST-TICL-Project</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aptos&display=swap'); /* Import Aptos font */
 
+        body {
+            background-color: #f5f5dc; /* Soft Beige */
+            font-family: 'Aptos', sans-serif; /* Apply Aptos font */
+        }
 
-<link rel="stylesheet" type="text/css"
-	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
-
-<!-- include java script in the footer -->
-<script type="text/javascript"
-	th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
-<script type="text/javascript"
-	th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-
-<title>UST-TICL-Project</title>
+        h1 {
+            font-weight: bold; /* Make the heading bold */
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<h1 class="text-center">UST TICL Project Registration</h1>
-		<div class="col-md-6">
-			<form name="saveUser" action="/save" method="post" class="form-horizontal">
-				<div class="form-group">
-					<label for="firstName">First Name:</label>
-					<input type="text" id="firstName" class="form-control" placeholder="First Name" name="firstName" />
-				</div>
-		
-				<div class="form-group">
-					<label for="lastName">Last Name:</label>
-					<input type="text" id="lastName" class="form-control" placeholder="Last Name" name="lastName">
-				</div>
-		
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" id="email" class="form-control" placeholder="Email" name="email">
-				</div>
-		
-				<div class="form-group">
-					<label for="projectTitle">Project Title:</label>
-					<input type="text" id="projectTitle" class="form-control" placeholder="Project Title" name="projectTitle">
-				</div>
-		
-				<div class="form-group">
-					<button type="submit" class="btn btn-default">Submit</button>
-				</div>
-			</form>
-		</div>
-		
+    <div class="container">
+        <h1 class="text-center">UST TICL Project Registration</h1>
+        <div class="col-md-6">
+            <form name="saveUser" action="/save" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="First Name" name="firstName" />
+                </div>
 
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" class="form-control" placeholder="Last Name" name="lastName">
+                </div>
 
-		<div class="col-md-12">
-			<h2>Registered USsociates</h2>
-			<table id="usersTable" class="table table-striped">
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Email</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
-		</div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Email" name="email">
+                </div>
 
+                <div class="form-group">
+                    <label for="projectTitle">Project Title:</label>
+                    <input type="text" id="projectTitle" class="form-control" placeholder="Project Title" name="projectTitle">
+                </div>
 
-		<div class="row-md-8">
-			<div class="col-md-3">
-				<img th:src="@{/img/USTLogo.png}" alt="logo" height="200">
-			</div>
-			<div class="col-md-8">
-				<h4 class="text-center">US Technology International Private Limited</h4>
-				<h5 class="text-center">
-					14th Floor, Tower B, Prestige Shantiniketan<br>
-					Whitefield, Bengaluru-560066<br>
-					Karnataka, India
-				</h5>
-				<h5 class="text-center">
-					Tel: +91 471 404 0000
-				</h5>
-				<h5 class="text-center">
-					Copyrights 2024 by <a href="http://app.shettyitsolutions.in/">UST</a>
-				</h5>
-			</div>
-		</div>
-		
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
 
-	</div>
+        <div class="col-md-12">
+            <h2>Registered Associates</h2>
+            <table id="usersTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
 
-	<script>
-		$.ajax({
-			url : "/api/users",
+        <div class="row-md-8">
+            <div class="col-md-3">
+                <!-- Ensure this image is the compressed version -->
+                <img th:src="@{/img/USTLogo.png}" alt="logo" height="200">
+            </div>
+            <div class="col-md-8">
+                <h4 class="text-center">US Technology International Private Limited</h4>
+                <h5 class="text-center">
+                    14th Floor, Tower B, Prestige Shantiniketan<br>
+                    Whitefield, Bengaluru-560066<br>
+                    Karnataka, India
+                </h5>
+                <h5 class="text-center">
+                    Tel: +91 471 404 0000
+                </h5>
+                <h5 class="text-center">
+                    Copyrights 2024 by <a href="http://app.shettyitsolutions.in/">UST</a>
+                </h5>
+            </div>
+        </div>
+    </div>
 
-			success : function(response) {
-				$.each(response, function(i, item) {
-					var row = $("<tr />");
-					$("#usersTable").append(row);
+    <script>
+        $.ajax({
+            url : "/api/users",
 
-					row.append($("<td>" + item.id + "</td>"));
-					row.append($("<td>" + item.firstName + "</td>"));
-					row.append($("<td>" + item.lastName + "</td>"));
-					row.append($("<td>" + item.email + "</td>"));
+            success : function(response) {
+                $.each(response, function(i, item) {
+                    var row = $("<tr />");
+                    $("#usersTable").append(row);
 
-				});
-			}
-		})
-	</script>
+                    row.append($("<td>" + item.id + "</td>"));
+                    row.append($("<td>" + item.firstName + "</td>"));
+                    row.append($("<td>" + item.lastName + "</td>"));
+                    row.append($("<td>" + item.email + "</td>"));
+
+                });
+            }
+        })
+    </script>
 </body>
 </html>
-
