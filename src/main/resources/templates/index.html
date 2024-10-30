@@ -16,39 +16,43 @@
 <script type="text/javascript"
 	th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 
-<title>Spring Boot MongoDB Demo</title>
+<title>UST-TICL-Project</title>
 </head>
 <body>
 	<div class="container">
-		<h1 class="text-center">Spring Boot + MongoDB Demo</h1>
+		<h1 class="text-center">UST TICL Project Registration</h1>
 		<div class="col-md-6">
-			<form name="saveUser" action="/save" method="post"
-				class="form-horizontal">
+			<form name="saveUser" action="/save" method="post" class="form-horizontal">
 				<div class="form-group">
-					<label for="firstName">First Name:</label> <input type="text"
-						id="firstName" class="form-control" placeholder="First Name"
-						name="firstName" />
+					<label for="firstName">First Name:</label>
+					<input type="text" id="firstName" class="form-control" placeholder="First Name" name="firstName" />
 				</div>
-
+		
 				<div class="form-group">
-					<label for="lastName">Last Name:</label> <input type="text"
-						id="lastName" class="form-control" placeholder="Last Name"
-						name="lastName">
+					<label for="lastName">Last Name:</label>
+					<input type="text" id="lastName" class="form-control" placeholder="Last Name" name="lastName">
 				</div>
-
+		
 				<div class="form-group">
-					<label for="email">Email:</label> <input type="email" id="email"
-						class="form-control" placeholder="Email" name="email">
+					<label for="email">Email:</label>
+					<input type="email" id="email" class="form-control" placeholder="Email" name="email">
 				</div>
+		
+				<div class="form-group">
+					<label for="projectTitle">Project Title:</label>
+					<input type="text" id="projectTitle" class="form-control" placeholder="Project Title" name="projectTitle">
+				</div>
+		
 				<div class="form-group">
 					<button type="submit" class="btn btn-default">Submit</button>
 				</div>
 			</form>
 		</div>
+		
 
 
 		<div class="col-md-12">
-			<h2>Saved Users</h2>
+			<h2>Registered USsociates</h2>
 			<table id="usersTable" class="table table-striped">
 				<thead>
 					<tr>
@@ -66,19 +70,24 @@
 
 		<div class="row-md-8">
 			<div class="col-md-3">
-				<img th:src="@{/img/mithunlogo.jpg}" alt="logo" height="200">
+				<img th:src="@{/img/USTLogo.png}" alt="logo" height="200">
 			</div>
 			<div class="col-md-8">
-				<h4 class="text-center">Mithun Technologies - Bengaluru,Karnataka,
-					Training, Development Center.</h4>
-				<h4 class="text-center">Contact @ +91-8296242028 ,
-					+91-9980923226</h4>
+				<h4 class="text-center">US Technology International Private Limited</h4>
 				<h5 class="text-center">
-					Copyrights 2020 by <a href="http://mithuntechnologies.com/">Mithun
-						Technologies</a>
+					14th Floor, Tower B, Prestige Shantiniketan<br>
+					Whitefield, Bengaluru-560066<br>
+					Karnataka, India
+				</h5>
+				<h5 class="text-center">
+					Tel: +91 471 404 0000
+				</h5>
+				<h5 class="text-center">
+					Copyrights 2024 by <a href="http://app.shettyitsolutions.in/">UST</a>
 				</h5>
 			</div>
 		</div>
+		
 
 	</div>
 
@@ -102,3 +111,4 @@
 	</script>
 </body>
 </html>
+
