@@ -34,4 +34,4 @@ docker ps -a
 ```
 
 ## License
-[Mithun Technologies](http://mithuntechnologies.co.in)
+[Dr. Venkata Ramana @ Shetty IT Solutions](http://shettyitsolutions.in)
