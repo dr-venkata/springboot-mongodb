@@ -1,14 +1,7 @@
 spring:
   data:
     mongodb:
-      # In Case of mongodb Repel Set
-      #uri: mongodb://${MONGO_DB_HOSTNAME}:${MONGO_DB_PASSWORD}@mongod-0.mongodb:27017,mongod-1.mongodb:27017,mongod-2.mongodb:27017/users
-      host: localhost
-      port: 27017
-      username: myUser
-      password: myPassword
-      database: users
-      authentication-database: admin
+      uri: mongodb+srv://shettyaws5:UC0XvvxlnSx0Q87r@cluster0.xu71l.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0
 
 server:
   port: 8080
