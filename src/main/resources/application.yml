@@ -4,4 +4,4 @@ spring:
       uri: mongodb+srv://shettyaws5:UC0XvvxlnSx0Q87r@cluster0.xu71l.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0
 
 server:
-  port: 80
+  port: 8080
