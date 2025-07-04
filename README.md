@@ -34,4 +34,4 @@ docker ps -a
 ```
 
 ## License
-[Dr. Venkata Ramana @Shetty IT Solutions](http://shettyitsolutions.in)
+[Dr. Venkata Ramana @Alladi Cloud Solutions](http://shettyitsolutions.in)
